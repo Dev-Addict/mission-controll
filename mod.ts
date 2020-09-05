@@ -18,6 +18,7 @@ app.use(async ({ response }, next) => {
 });
 
 app.use(router.routes());
+app.use(router.allowedMethods());
 
 app.use(async (ctx) => {
   const filePath = ctx.request.url.pathname;
